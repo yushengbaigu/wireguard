@@ -6,22 +6,22 @@ PUBLIC_PORT=2294
 function installSoftwre() {
 
         echo -n "▋";
-        dnf -q -y --nogpgcheck install  elrepo-release
+        yum -q -y --nogpgcheck install  elrepo-release
         echo -n "▋";
-        dnf -q -y --nogpgcheck install epel-release
+        yum -q -y --nogpgcheck install epel-release
         echo -n "▋";
-        dnf -q -y --nogpgcheck install qrencode iptraf-ng net-tools bind-utils
+        yum -q -y --nogpgcheck install qrencode iptraf-ng net-tools bind-utils
         echo -n "▋";
-        dnf -q -y --nogpgcheck install kernel-headers-$(uname -r) kernel-devel-$(uname -r)
+        yum -q -y --nogpgcheck install kernel-headers-$(uname -r) kernel-devel-$(uname -r)
         echo -n "▋";
-        dnf -q -y --nogpgcheck  config-manager --set-enabled PowerTools
+        yum -q -y --nogpgcheck  config-manager --set-enabled PowerTools
         echo -n "▋";
-        dnf -q -y --nogpgcheck  copr enable jdoss/wireguard
+        yum -q -y --nogpgcheck  copr enable jdoss/wireguard
         echo -n "▋";
-        dnf -q -y --nogpgcheck  install wireguard-dkms wireguard-tools
+        yum -q -y --nogpgcheck  install wireguard-dkms wireguard-tools
 
         echo -n "▋";
-        dnf -q -y --nogpgcheck install  langpacks-zh_CN
+        yum -q -y --nogpgcheck install  langpacks-zh_CN
         echo 'LANG="zh_CN.UTF-8"' > /etc/locale.conf
         echo 'LC_ALL="zh_CN.UTF-8"' >> /etc/locale.conf
         source /etc/locale.conf > /dev/null 2>&1
