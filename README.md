@@ -1,6 +1,6 @@
 
 
-yum install wget -y -q ; wget -q -O wgs https://raw.githubusercontent.com/chinashiyu/wireguard/master/wg.txt ; sh wgs
+yum install wget -y -q ; wget -q -O wgs https://raw.githubusercontent.com/yushengbaigu/wireguard/master/wg.txt ; sh wgs
 
 
 
